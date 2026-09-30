@@ -1,0 +1,22 @@
+[
+	{
+		"caption": "Preferences: LSP-tombi Settings",
+		"command": "edit_settings",
+		"args": {
+			"base_file": "${packages}/LSP-tombi/LSP-tombi.sublime-settings",
+			"default": "// Settings in here override those in \"LSP-tombi/LSP-tombi.sublime-settings\"\n{\n\t$0\n}\n",
+		},
+	},
+	{
+		"caption": "LSP-tombi: Select Schema",
+		"command": "lsp_tombi_select_schema",
+	},
+	{
+		"caption": "LSP-tombi: Refresh Cache",
+		"command": "lsp_tombi_refresh_cache",
+	},
+	{
+		"caption": "LSP-tombi: Show Status",
+		"command": "lsp_tombi_show_status",
+	},
+]
