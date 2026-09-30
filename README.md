@@ -31,6 +31,17 @@ Configure Tombi for your project in a `tombi.toml`, `.tombi.toml` or in the `[to
 
 You can also give editor-level config in the `settings.tombi` object of the LSP-tombi settings. It uses the same keys as `tombi.toml`.
 
+## Formatting
+
+Tombi supports formatting of the document.
+
+- To format the file, run `LSP: Format File` from the Command Palette.
+- To format each time you save, set `"lsp_format_on_save": true` in the LSP settings. To do this only for TOML files, add the setting to the syntax-specific settings (`Preferences > Settings - Syntax Specific`) of a TOML file.
+
+Configure the formatter in the `[format.rules]` table of the Tombi config, for example `indent-width` or `line-width`. See the [configuration documentation](https://tombi-toml.github.io/tombi/docs/configuration) for all rules. Tombi does not use the `tab_size` and `translate_tabs_to_spaces` settings of Sublime Text.
+
+By default, Tombi sorts table keys and array values in the order that the JSON Schema of the file gives (for example in `Cargo.toml` and `pyproject.toml`). To stop this, see [Auto Sorting](https://tombi-toml.github.io/tombi/docs/formatter/auto-sorting).
+
 ## Semantic highlighting
 
 Tombi gives semantic tokens for table names, keys, values and `# tombi:` comment directives. To use them, set `"semantic_highlighting": true` in the LSP settings. The `semantic_tokens` setting of LSP-tombi gives the scopes for the custom token types (`table`, `key`, `boolean`, `offsetDateTime`, `localDateTime`, `localDate` and `localTime`). The default scopes are the same as the scopes of the TOML syntax. To change a color, add a color scheme rule for `meta.semantic-token.<token-type>` (all lowercase), for example `meta.semantic-token.table`.
