@@ -36,6 +36,7 @@
 			"triggerCharacters": true,
 		},
 	},
+	"auto_complete_selector": "punctuation.separator.key-value",
 	"selector": "source.toml",
 	"schemes": [
 		"file",
