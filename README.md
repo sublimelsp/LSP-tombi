@@ -1,6 +1,6 @@
 # LSP-tombi
 
-This is a helper package that starts the [Tombi](https://github.com/tombi-toml/tombi) TOML language server for you.
+This is a helper package that starts the [Tombi](https://tombi-toml.github.io/tombi) TOML language server for you.
 
 Tombi gives formatting, linting, completion, hover and schema validation for all TOML files. It uses the [JSON Schema Store](https://www.schemastore.org/) catalog, so files like `pyproject.toml`, `Cargo.toml` and many others get schema support automatically.
 
