@@ -1,0 +1,45 @@
+{
+	// Resolved by the plugin: a `tombi` binary from the `.venv` of the workspace folder,
+	// else the managed binary that is downloaded from GitHub.
+	// Replace `$server_path` with an absolute path to use a different binary.
+	"command": ["$server_path", "lsp"],
+	"env": {
+		"NO_COLOR": "1",
+	},
+	"settings": {
+		// Editor-level Tombi config. Uses the same keys as `tombi.toml`, for example:
+		// "tombi": {
+		// 	"toml-version": "v1.1.0",
+		// },
+	},
+	// Semantic highlighting operates only if `"semantic_highlighting": true` is set in the LSP settings.
+	"semantic_tokens": {
+		// Built-in LSP tokens. Empty value prevents creation of semantic tokens.
+		// Not enabled because Sublime's syntax seems to handle those well itself.
+		"comment": "",
+		"keyword": "",
+		"string": "",
+		"number": "",
+		"operator": "",
+		// Additional tokens supported by Tombi.
+		// "table": "meta.section.toml entity.name.section.toml",
+		// "key": "meta.mapping.key.toml string.unquoted.toml",
+		// "boolean": "constant.language.boolean.toml",
+		// "offsetDateTime": "constant.other.datetime.toml",
+		// "localDateTime": "constant.other.datetime.toml",
+		// "localDate": "constant.other.date.toml",
+		// "localTime": "constant.other.time.toml",
+	},
+	// Server-provided trigger characters cause more harm than good.
+	"disabled_capabilities": {
+		"completionProvider": {
+			"triggerCharacters": true,
+		},
+	},
+	"auto_complete_selector": "punctuation.separator.key-value",
+	"selector": "source.toml",
+	"schemes": [
+		"file",
+		"buffer",
+	]
+}
